@@ -1,0 +1,28 @@
+<header class="main-header">
+  <div class="container navbar">
+    <div class="logo-container">
+      <img src="logo.svg" alt="Matt Innova Solution" class="logo-img">
+    </div>
+
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Inicio</a></li>
+        <li><a routerLink="/acerca-de" routerLinkActive="active">Acerca de</a></li>
+        <li><a routerLink="/e-learning" routerLinkActive="active">MIS E-learning</a></li>
+
+        <li class="dropdown">
+          <a class="dropbtn">Servicios <i class="bi bi-caret-down-fill"></i></a>
+          <div class="dropdown-content">
+            <a routerLink="/servicios/saas">SAAS</a>
+            <a routerLink="/servicios/hardware">Hardware</a>
+            <a routerLink="/servicios/software">Software</a>
+            <a routerLink="/servicios/consultoria">Consultoría</a>
+            <a routerLink="/servicios/soluciones-ti">Soluciones TI</a>
+          </div>
+        </li>
+
+        <li><a routerLink="/contacto" routerLinkActive="active">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
