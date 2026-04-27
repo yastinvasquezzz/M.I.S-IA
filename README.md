@@ -1,7 +1,7 @@
 # 🚀 **Matt Innova Solution - Proyecto Web**
 
 ¡Bienvenidos al repositorio oficial de **Matt Innova Solution**!  
-Este proyecto representa la evolución tecnológica de nuestra plataforma, migrada de **React a Angular v18** para ofrecer una arquitectura más robusta, escalable y optimizada para soluciones de redes y servicios TI.
+Este proyecto representa la evolución tecnológica de nuestra plataforma, migrada de **Laravel a Angular v18** para ofrecer una arquitectura más robusta, escalable y optimizada para soluciones de redes y servicios TI.
 
 ---
 
