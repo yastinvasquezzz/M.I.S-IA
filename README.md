@@ -1,73 +1,135 @@
-Matt Innova Solution - Proyecto Web 🚀
-¡Bienvenidos al repositorio oficial de Matt Innova Solution! Este proyecto ha sido migrado de React a Angular v18 para ofrecer una arquitectura más robusta, escalable y optimizada para soluciones de redes y TI.
+# 🚀 **Matt Innova Solution - Proyecto Web**
 
-📂 Estructura del Proyecto
-El repositorio está organizado de la siguiente manera:
+¡Bienvenidos al repositorio oficial de **Matt Innova Solution**!  
+Este proyecto representa la evolución tecnológica de nuestra plataforma, migrada de **React a Angular v18** para ofrecer una arquitectura más robusta, escalable y optimizada para soluciones de redes y servicios TI.
 
-/ (Raíz): Contiene el código fuente del Frontend desarrollado en Angular.
+---
 
-/backend: Contiene la lógica del servidor, APIs y base de datos.
+## 📂 **Estructura del Proyecto**
 
-/public: Recursos estáticos (Logos, imágenes principales).
+El repositorio está organizado bajo una arquitectura de separación de intereses:
 
-🛠️ Tecnologías Utilizadas
-Frontend: Angular 18+, SCSS, TypeScript.
+- **/** (Raíz): Código fuente del Frontend desarrollado en Angular 18  
+- **/backend**: Lógica del servidor, APIs y modelos de base de datos  
+- **/public**: Recursos estáticos (logos e imágenes)
 
-Diseño: Glassmorphism & Cyber-Tech aesthetics.
+---
 
-Iconos: Bootstrap Icons.
+## 🛠️ **Tecnologías Utilizadas**
 
-Backend: [Aquí puedes agregar si usas Node.js, Laravel, etc.]
+| **Capa**     | **Tecnologías** |
+|-------------|----------------|
+| Frontend    | Angular 18+, SCSS (Sass), TypeScript |
+| Diseño      | Glassmorphism & Cyber-Tech Aesthetics |
+| Iconografía | Bootstrap Icons |
+| Backend     | *(Pendiente: Node.js / Laravel / Python)* |
 
-🚀 Guía de Inicio Rápido
-Para que el proyecto corra en tu máquina local, sigue estos pasos:
+---
 
-1. Requisitos Previos
-Asegúrate de tener instalado:
+## 🚀 **Guía de Inicio Rápido**
 
-Node.js (v18 o superior)
+### **1. Requisitos Previos**
 
-Angular CLI: npm install -g @angular/cli
+Es obligatorio contar con:
 
-2. Instalación
-Clona el repositorio y entra en la carpeta del proyecto:
+- Node.js (v18 o superior)  
+- Angular CLI:
+```bash
+npm install -g @angular/cli
+```
 
-Bash
-git clone https://github.com/TU_USUARIO/TU_REPO.git
+---
+
+### **2. Instalación**
+
+Clona el repositorio y accede a la carpeta:
+
+```bash
+git clone https://github.com/yastinvasquezzz/M.I.S-IA.git
 cd mis_ia
-Instala las dependencias del Frontend:
+```
 
-Bash
+Instala las dependencias:
+
+```bash
 npm install
-3. Ejecución
-Para levantar el servidor de desarrollo del Frontend:
+```
 
-Bash
+---
+
+### **3. Ejecución**
+
+Inicia el servidor de desarrollo:
+
+```bash
 ng serve
-Luego, abre tu navegador en http://localhost:4200/.
+```
 
-🤝 Reglas para Colaboradores
-Para mantener el orden en el flujo de trabajo (Workflow):
+Accede desde tu navegador:
 
-Ramas (Branches): No trabajes directamente sobre main. Crea una rama para tu tarea:
+👉 http://localhost:4200/
+
+---
+
+## 🤝 **Reglas para Colaboradores (Workflow)**
+
+Para mantener un flujo profesional:
+
+### **🔹 Ramas (Branches)**
+Prohibido trabajar directamente en `main`.  
+Crear ramas descriptivas:
+```bash
 git checkout -b feature/nombre-de-tu-tarea
+```
 
-Commits: Usa mensajes descriptivos (ej: feat: add contact form validation).
+### **🔹 Commits**
+Usar **Conventional Commits**:
+- `feat:` nueva funcionalidad  
+- `fix:` correcciones  
+- `style:` cambios visuales  
 
-Pull Requests: Una vez terminada tu parte, sube tu rama y abre un PR para revisión.
+Ejemplo:
+```bash
+feat: add contact form validation
+```
 
-📬 Contacto
-Si tienes dudas sobre la infraestructura o la arquitectura de red del proyecto, contacta con:
+### **🔹 Pull Requests**
+Todo cambio debe pasar por revisión antes de integrarse a `main`.
 
-Admin: Vasquez (Matt Innova Solution)
+---
 
-Web: mattinnovasolution.com
+## 📬 **Contacto & Soporte**
 
-Nota para el equipo: El modo SSR (Server Side Rendering) ha sido desactivado para simplificar el desarrollo frontend. Por favor, asegúrense de usar ng serve estándar.
+Para consultas sobre infraestructura o arquitectura:
 
-💡 Cómo usarlo:
-Crea un archivo llamado README.md en la raíz de tu carpeta mis_ia.
+- **Admin:** Vasquez *(Lead Engineer)*  
+- **Sitio Web:** mattinnovasolution.com  
 
-Pega este contenido.
+---
 
-Haz un git add README.md, luego git commit -m "docs: add professional readme" y finalmente git push.
+## ⚠️ **Nota Técnica Importante**
+
+El modo **SSR (Server Side Rendering)** ha sido desactivado intencionalmente para simplificar el desarrollo.
+
+👉 Usar siempre:
+```bash
+ng serve
+```
+
+---
+
+## 📌 **Cómo aplicar este README**
+
+1. Abre tu archivo `README.md` en VS Code  
+2. Reemplaza el contenido con este archivo  
+3. Ejecuta:
+
+```bash
+git add README.md
+git commit -m "docs: improve readme structure and styling"
+git push origin frontend
+```
+
+---
+
+✨ **Matt Innova Solution — Innovando el futuro digital**
