@@ -7,6 +7,9 @@ import { Consultoria } from './pages/servicios/consultoria/consultoria';
 import { SolucionesTi } from './pages/servicios/soluciones-ti/soluciones-ti';
 import { Home } from './pages/home/home';
 
+//nuevo
+import { Contacto } from './pages/contacto/contacto';
+
 export const routes: Routes = [
   {path:'', component: Home},
   {path: "servicios",
@@ -18,5 +21,7 @@ export const routes: Routes = [
       { path: 'consultoria', component: Consultoria},
       { path: 'soluciones-ti', component: SolucionesTi},
     ]
-  }
+  },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'contacto', component: Contacto }
 ];
