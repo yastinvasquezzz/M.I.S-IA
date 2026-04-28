@@ -1,0 +1,175 @@
+// HERO
+.hero {
+  background: url('/consultoria.jpg') center center / cover no-repeat;
+  height: 280px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// INFO
+.info-section {
+  padding: 50px 60px;
+  background: #fff;
+}
+
+.info-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  align-items: stretch;
+}
+
+.info-imagen {
+  flex: 0 0 340px;
+  padding: 8px; // 🔥 esto crea el espacio entre imagen y borde
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  background: #fff; // importante para que se vea el “marco”
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 8px; // un poco menor que el contenedor
+  }
+}
+
+
+.info-texto {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .badge {
+    display: inline-block;
+    background: #0078ff;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    width: fit-content;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 14px;
+    color: #111;
+    line-height: 1.2;
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+}
+
+.btn-contacto {
+  background: #0078ff;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  width: fit-content;
+  transition: all 0.3s ease;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+// RAZONES
+.razones-section {
+  padding: 50px 60px;
+  background: #fff;
+}
+
+.razones-container {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  .badge-razones {
+    display: inline-block;
+    background: #0078ff;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 28px;
+    color: #111;
+  }
+}
+
+.razones-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.razon-card {
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  padding: 8px; // 🔥 AQUI está la clave
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+  }
+
+  img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    border-radius: 6px; // 🔥 menor que el contenedor
+    margin-bottom: 10px; // separa del texto
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111;
+    padding: 6px 10px 4px;
+  }
+
+  p {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.6;
+    padding: 0 10px 12px;
+  }
+  .section-divider {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 0 60px;
+}
+}

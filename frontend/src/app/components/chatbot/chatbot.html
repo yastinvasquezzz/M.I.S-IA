@@ -1,0 +1,46 @@
+<button class="chat-bubble" (click)="toggleChat()" *ngIf="!isOpen">
+  <img src="assets/logo-mis.png" alt="MIS-Bot" onerror="this.src='https://cdn-icons-png.flaticon.com/512/8943/8943377.png'">
+</button>
+
+<div class="chat-window" [class.open]="isOpen">
+  <div class="chat-header">
+    <div class="bot-info">
+      <span class="status-dot"></span>
+      <strong>MIS-Bot</strong>
+    </div>
+    <button (click)="toggleChat()">×</button>
+  </div>
+
+  <div class="chat-body" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+  <div *ngFor="let msg of messages" [ngClass]="msg.type" class="message-row">
+
+    <div class="avatar" *ngIf="msg.type === 'bot'">
+      <img src="logo.svg" alt="MIS" onerror="this.src='https://cdn-icons-png.flaticon.com/512/8943/8943377.png'">
+    </div>
+
+    <div class="bubble-wrapper">
+      <p>{{ msg.text }}</p>
+    </div>
+
+  </div>
+
+  <div class="bot message-row typing-indicator" *ngIf="isTyping">
+    <div class="avatar">
+      <img src="assets/logo-mis.png" alt="MIS">
+    </div>
+    <div class="bubble-wrapper points">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</div>
+
+  <div class="chat-footer">
+    <input
+      [(ngModel)]="userInput"
+      (keyup.enter)="sendMessage()"
+      placeholder="Escribe tu duda técnica..."
+      type="text"
+    >
+    <button (click)="sendMessage()">➤</button>
+  </div>
+</div>

@@ -1,9 +1,19 @@
 <div class="home-wrapper">
-  <section class="hero">
+  <section class="hero" [ngStyle]="{'background-image': 'url(' + slides[currentSlide].image + ')'}">
     <div class="hero-overlay">
+
+      <div class="slider-indicators">
+        <div
+          *ngFor="let slide of slides; let i = index"
+          class="dot"
+          [class.active]="currentSlide === i"
+          (click)="setSlide(i)">
+        </div>
+      </div>
+
       <div class="container hero-content">
-        <span class="badge">INNOVACIÓN EN TECNOLOGÍA</span>
-        <h1>Soluciones TI que Transforman para tu empresa</h1>
+        <span class="badge">{{ slides[currentSlide].badge }}</span>
+        <h1>{{ slides[currentSlide].title }}</h1>
         <button class="btn-primary">Aprender Más</button>
       </div>
     </div>
@@ -12,54 +22,188 @@
   <section class="about container">
     <div class="about-grid">
       <div class="about-img">
-        <img src="imagen.jpg" alt="Tecnología avanzada">
+        <img src="about-image.jpg" alt="Especialista TI trabajando">
       </div>
+
       <div class="about-text">
         <span class="section-tag">QUIENES SOMOS</span>
         <h2>Soluciones TI que Transforman</h2>
-        <p>Nuestra empresa tiene como objetivo principal impulsar el crecimiento de las empresas mediante soluciones tecnológicas innovadoras y de alta calidad.</p>
-        <button class="btn-outline">Leer más</button>
+        <p>
+          Nuestra empresa tiene como objetivo principal impulsar el crecimiento de las empresas
+          mediante soluciones tecnológicas innovadoras y de alta calidad, ya que contamos con
+          un equipo de profesionales altamente capacitados y una amplia gama de servicios
+          adaptados a las necesidades de nuestros clientes.
+        </p>
+        <button class="btn-read-more">Leer más</button>
       </div>
     </div>
   </section>
+
+  <section class="contact-section container">
+  <div class="contact-grid">
+
+    <div class="info-card">
+      <div class="icon-box"><i class="bi bi-geo-alt-fill"></i></div>
+      <div class="text-box">
+        <h3>Domicilio Legal</h3>
+        <p>Urb. Libertad Mz.I Lt.5 Calle Las Moras S/N San Vicente - Cañete - Lima - Perú</p>
+      </div>
+    </div>
+
+    <div class="info-card">
+      <div class="icon-box"><i class="bi bi-envelope-fill"></i></div>
+      <div class="text-box">
+        <h3>Envíanos un Correo electrónico</h3>
+        <p>contacto@mattinnovasolution.com</p>
+      </div>
+    </div>
+
+    <div class="info-card">
+      <div class="icon-box"><i class="bi bi-telephone-fill"></i></div>
+      <div class="text-box">
+        <h3>WhatsApp</h3>
+        <p>(+51) 992 422 219</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <hr class="section-divider">
 
   <section class="services-main container">
-    <span class="section-tag">QUÉ HACEMOS</span>
-    <h2 class="title-left">Ofrecemos Servicios</h2>
+  <span class="section-tag">QUÉ HACEMOS</span>
+  <h2 class="title-left">Ofrecemos Servicios</h2>
 
-    <div class="services-grid">
-      <div class="service-card">
-        <img src="imagen.jpg" alt="Consultoría">
-        <div class="card-body">
-          <h3>Consultoría De Informática Y De Gestión De Instalaciones</h3>
-          <p>Ofrecemos servicios de hosting y dominio, diseño y creación de páginas web, desarrollo de sistemas...</p>
-        </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="card-img">
+        <img src="imac.jpg" alt="Consultoría TI">
       </div>
+      <div class="card-body">
+        <h3>Consultoría De Informática Y De Gestión De Instalaciones Informáticas</h3>
+        <p>Ofrecemos servicios de hosting y dominio, diseño y creación de páginas web, desarrollo de sistemas informáticos, implementación de redes, y mucho más.</p>
       </div>
-  </section>
+    </div>
 
-  <section class="innovative-services container">
-    <div class="innovative-grid">
-      <div class="innovative-intro">
-        <span class="section-tag">SERVICIOS INNOVADORES</span>
-        <h2>Conozca Nuestro Servicios</h2>
-        <p>En MIS innovamos brindando soluciones tecnológicas integrales desde el diseño web...</p>
-        <button class="btn-primary">Descubrir más</button>
+    <div class="service-card">
+      <div class="card-img">
+        <img src="imas.jpg" alt="Tecnología">
       </div>
-      <div class="innovative-items">
-        <div class="mini-card">
-          <img src="imagen.jpg" alt="Soluciones TI">
-          <h4>Soluciones TI</h4>
+      <div class="card-body">
+        <h3>Actividades De Tecnología De La Información Y De Servicios Informáticos</h3>
+        <p>Nos especializamos en la automatización de procesos, integración y mantenimiento de sistemas informáticos, soporte técnico, y arquitectura de soluciones TI.</p>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="card-img">
+        <img src="imat.jpg" alt="Consultoría Gestión">
+      </div>
+      <div class="card-body">
+        <h3>Actividades De Consultoría De Gestión</h3>
+        <p>Brindamos nuevos productos y servicios de TI, implementación de ecosistemas de trabajo digital colaborativo, y desarrollo de nuevos sistemas informáticos.</p>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="card-img">
+        <img src="cursos.jpg" alt="Capacitaciones">
+      </div>
+      <div class="card-body">
+        <h3>Capacitaciones y Cursos con Certificación</h3>
+        <p>Ofrecemos cursos especializados en tecnología, impartidos por expertos, con certificaciones que avalan tus conocimientos y mejoran tu perfil profesional.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <hr class="section-divider">
+
+  <section class="innovative-services">
+  <div class="container innovative-grid">
+
+    <div class="innovative-intro">
+      <span class="section-tag-light">SERVICIOS INNOVADORES</span>
+      <h2>Conozca Nuestro Servicios</h2>
+      <p>
+        En Matt Innova Solution, brindamos soluciones tecnológicas integrales:
+        desde el diseño web y la implementación de sistemas, hasta la
+        automatización y la seguridad de la información.
+      </p>
+      <button class="btn-discover">Descubrir más</button>
+    </div>
+
+    <div class="innovative-carousel-viewport">
+      <div class="innovative-items"
+           [ngStyle]="{'transform': 'translateX(-' + (currentServiceSlide * 33.33) + '%)'}">
+
+        <div class="mini-card" *ngFor="let service of innovativeServices">
+          <div class="card-img">
+            <img [src]="service.img" [alt]="service.title">
+          </div>
+          <div class="card-info">
+            <h4>{{ service.title }}</h4>
+            <p>{{ service.desc }}</p>
+          </div>
         </div>
-        <div class="mini-card">
-          <img src="imagen.jpg" alt="SAAS">
-          <h4>SAAS</h4>
-        </div>
-        <div class="mini-card">
-          <img src="imagen.jpg" alt="Hardware">
-          <h4>Hardware</h4>
+      </div>
+
+      <div class="service-indicators">
+        <div *ngFor="let dot of [0, 1]; let i = index"
+             class="service-dot"
+             [class.active]="currentServiceSlide === i"
+             (click)="setServiceSlide(i)">
         </div>
       </div>
     </div>
-  </section>
+
+  </div>
+</section>
+
+  <hr class="section-divider">
+
+  <section class="testimonials-section">
+    <div class="container testimonials-grid">
+
+      <div class="testimonials-intro">
+        <span class="section-tag-light">NUESTROS CLIENTES</span>
+        <h2>Lo que dicen nuestro clientes</h2>
+        <p>
+          En MIS ha sido fundamental en la mejora de nuestras soluciones TI.
+          Su atención personalizada y soporte excepcional nos han ayudado a
+          alcanzar nuestros objetivos tecnológicos con gran éxito.
+        </p>
+      </div>
+
+      <div class="testimonials-carousel">
+        <div class="testimonial-track" [ngStyle]="{'transform': 'translateX(-' + (currentTestimonialSlide * 50) + '%)'}">
+
+          <div class="testimonial-card" *ngFor="let item of testimonials">
+            <div class="testimonial-bubble">
+              <p>{{ item.text }}</p>
+            </div>
+            <div class="client-info">
+              <img [src]="item.logo" [alt]="item.client">
+              <div class="client-details">
+                <h4>{{ item.client }}</h4>
+                <span>Matt Innova Solution</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="testimonial-indicators">
+          <div *ngFor="let dot of [0, 1]; let i = index"
+              class="dot"
+              [class.active]="currentTestimonialSlide === i"
+              (click)="setTestimonialSlide(i)">
+        </div>
+      </div>
+    </div>
+
+  </div>
+ </section>
+
 </div>
