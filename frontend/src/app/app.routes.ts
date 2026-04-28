@@ -9,14 +9,10 @@ import { Home } from './pages/home/home';
 
 export const routes: Routes = [
   {path:'', component: Home},
-  {path: "servicios",
-    component: Servicios,
-    children: [
-      { path: 'saas', component: Saas},
-      { path: 'hardware', component: Hardware},
-      { path: 'software', component: Software},
-      { path: 'consultoria', component: Consultoria},
-      { path: 'soluciones-ti', component: SolucionesTi},
-    ]
-  }
+  {path: "servicios", component: Servicios},
+  { path: 'servicios/saas', component: Saas},
+  { path: 'servicios/hardware', component: Hardware},
+  { path: 'servicios/software', component: Software},
+  { path: 'servicios/consultoria', component: Consultoria},
+  { path: 'servicios/soluciones-ti', component: SolucionesTi},
 ];

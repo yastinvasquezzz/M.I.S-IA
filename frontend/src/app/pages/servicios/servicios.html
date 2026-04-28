@@ -1,1 +1,72 @@
-<p>servicios works!</p>
+<main class="serviciosPage">
+  <!-- HERO -->
+  <section class="hero">
+    <img 
+      src="/carousel.jpg" 
+      alt="Servicios Banner"
+      class="heroImage"
+    />
+    <div class="heroOverlay">
+      <h1>Nuestros Servicios</h1>
+      <p>Soluciones tecnológicas integrales para tu empresa</p>
+    </div>
+  </section>
+
+  <!-- SERVICIOS GRID -->
+  <section class="servicesGrid">
+    <div class="container">
+      <div class="servicesHeader">
+        <p class="servicesSubtitle">CONOCE NUESTROS</p>
+        <h2 class="servicesTitle">Servicios</h2>
+      </div>
+
+      <div class="servicesCards">
+        <div class="serviceCard" routerLink="/servicios/software">
+          <img src="/imac.jpg" alt="Software"/>
+          <h3>Software</h3>
+          <p>Desarrollo e implementación de soluciones de software a medida para optimizar tus procesos empresariales.</p>
+          <a class="serviceLink">Ver más →</a>
+        </div>
+
+        <div class="serviceCard" routerLink="/servicios/hardware">
+          <img src="/tecnocom.jpg" alt="Hardware"/>
+          <h3>Hardware</h3>
+          <p>Suministro e instalación de equipos de cómputo y periféricos de última generación.</p>
+          <a class="serviceLink">Ver más →</a>
+        </div>
+
+        <div class="serviceCard" routerLink="/servicios/consultoria">
+          <img src="/about-image.jpg" alt="Consultoría"/>
+          <h3>Consultoría</h3>
+          <p>Asesoramiento experto para transformar digitalmente tu negocio y optimizar operaciones.</p>
+          <a class="serviceLink">Ver más →</a>
+        </div>
+
+        <div class="serviceCard" routerLink="/servicios/saas">
+          <img src="/worldnet.jpg" alt="SaaS"/>
+          <h3>SaaS</h3>
+          <p>Soluciones en la nube para gestionar tu negocio desde cualquier lugar con total seguridad.</p>
+          <a class="serviceLink">Ver más →</a>
+        </div>
+
+        <div class="serviceCard" routerLink="/servicios/soluciones-ti">
+          <img src="/imagen.jpg" alt="Soluciones TI"/>
+          <h3>Soluciones TI</h3>
+          <p>Infraestructura tecnológica completa para garantizar el funcionamiento óptimo de tu empresa.</p>
+          <a class="serviceLink">Ver más →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="ctaSection">
+    <div class="container">
+      <div class="ctaContent">
+        <h2>¿Listo para transformar tu negocio?</h2>
+        <p>Contáctanos y descubre cómo nuestras soluciones pueden llevar tu empresa al siguiente nivel.</p>
+        <a routerLink="/contacto" class="ctaBtn">Contáctanos</a>
+      </div>
+    </div>
+  </section>
+</main>

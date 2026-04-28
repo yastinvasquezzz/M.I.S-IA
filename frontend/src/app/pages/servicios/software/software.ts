@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-software',
   imports: [],
   templateUrl: './software.html',
-  styleUrl: './software.scss',
+  styleUrls: ['./software.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class Software {
 
