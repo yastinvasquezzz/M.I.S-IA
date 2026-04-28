@@ -8,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AcercaDe {
 
+videos = [
+  {
+    id: 'VIDEO_ID_1',
+    titulo: 'Relacionamiento con Partner Microsoft Local y Tenant Microsoft 365'
+  },
+  {
+    id: 'VIDEO_ID_2',
+    titulo: 'Relacionamiento con Partner Microsoft Local y Tenant Microsoft 365'
+  }
+];
+
 }
