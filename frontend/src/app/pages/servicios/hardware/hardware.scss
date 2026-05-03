@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero {
+  width: 100%;
+  height: 400px;
+
+  .heroImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* SERVICIO */
+.serviceContent {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 0;
+
+  .serviceImage {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .serviceRight {
+    max-width: 500px;
+
+    .serviceLabel {
+      background-color: #00aaff;
+      color: white;
+      font-weight: 600;
+      margin-bottom: 10px;
+      padding: 2px 8px;
+      display: inline-block;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .contactBtn {
+      background: #00aaff;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-block;
+
+      &:hover {
+        background: #008ecc;
+      }
+    }
+  }
+}
+
+/* RAZONES */
+.reasonsToChoose {
+  padding: 60px 0;
+}
+
+.reasonsHeader {
+  text-align: left;
+  margin-bottom: 40px;
+  margin-left: 0;
+}
+
+.reasonsSubtitle {
+  background-color: #00aaff;
+  color: white;
+  font-weight: 600;
+  padding: 2px 8px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.reasonsTitle {
+  font-size: 32px;
+}
+
+.reasonsCards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 👈 aquí son 2 tarjetas */
+  gap: 25px;
+}
+
+.reasonCard {
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s;
+  background: #fff;
+
+  &:hover {
+    transform: translateY(-5px);
+    h3 {
+      color: #00aaff;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .reasonsCards {
+    grid-template-columns: 1fr;
+  }
+
+  .serviceContent {
+    flex-direction: column;
+    text-align: center;
+  }
+}
