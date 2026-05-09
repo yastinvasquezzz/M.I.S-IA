@@ -1,1 +1,81 @@
-<p>contacto works!</p>
+<div class="contacto-container">
+
+  <!-- LADO IZQUIERDO -->
+  <div class="info">
+    <span class="badge">PONERSE EN CONTACTO</span>
+    <h2>Contáctenos para cualquier consulta</h2>
+
+    <div class="card">
+      <div class="icon">
+        <i class="bi bi-geo-alt"></i>
+      </div>
+      <div>
+        <h4>Domicilio Legal</h4>
+        <p>Urb. Libertad Mz. Lt.5 Calle Las Moras S/N San Vicente de Cañete</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="icon">
+        <i class="bi bi-envelope"></i>
+      </div>
+      <div>
+        <h4>Envíanos un Correo electrónico</h4>
+        <p>contacto@mattinnovasolution.com</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="icon">
+        <i class="bi bi-whatsapp"></i>
+      </div>
+      <div>
+        <h4>WhatsApp</h4>
+        <p>(+51) 992 422 219</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FORMULARIO -->
+  <div class="formulario">
+    <form (ngSubmit)="enviar()">
+
+      <div class="fila">
+        <input
+          type="text"
+          placeholder="Su nombre"
+          [(ngModel)]="nombre"
+          name="nombre"
+          required
+        />
+
+        <input
+          type="email"
+          placeholder="Su correo electrónico"
+          [(ngModel)]="email"
+          name="email"
+          required
+        />
+      </div>
+
+      <input
+        type="text"
+        placeholder="Asunto"
+        [(ngModel)]="asunto"
+        name="asunto"
+        required
+      />
+
+      <textarea
+        placeholder="Mensaje"
+        [(ngModel)]="mensaje"
+        name="mensaje"
+        required
+      ></textarea>
+
+      <button type="submit">Enviar Mensaje</button>
+
+    </form>
+  </div>
+
+</div>

@@ -14,7 +14,7 @@
       <div class="container hero-content">
         <span class="badge">{{ slides[currentSlide].badge }}</span>
         <h1>{{ slides[currentSlide].title }}</h1>
-        <button class="btn-primary">Aprender Más</button>
+        <button class="btn-primary" routerLink="/servicios/soluciones-ti">Aprender Más</button>
       </div>
     </div>
   </section>
@@ -34,7 +34,7 @@
           un equipo de profesionales altamente capacitados y una amplia gama de servicios
           adaptados a las necesidades de nuestros clientes.
         </p>
-        <button class="btn-read-more">Leer más</button>
+        <button class="btn-read-more" routerLink="/acerca-de">Leer más</button>
       </div>
     </div>
   </section>
@@ -131,7 +131,7 @@
         desde el diseño web y la implementación de sistemas, hasta la
         automatización y la seguridad de la información.
       </p>
-      <button class="btn-discover">Descubrir más</button>
+      <button class="btn-discover" routerLink="/servicios">Descubrir más</button>
     </div>
 
     <div class="innovative-carousel-viewport">
@@ -199,11 +199,11 @@
               class="dot"
               [class.active]="currentTestimonialSlide === i"
               (click)="setTestimonialSlide(i)">
+          </div>
         </div>
       </div>
-    </div>
 
-  </div>
- </section>
+    </div>
+  </section>
 
 </div>

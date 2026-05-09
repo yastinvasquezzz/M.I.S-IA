@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-software',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './software.html',
-  styleUrl: './software.scss',
+  styleUrls: ['./software.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class Software {
 

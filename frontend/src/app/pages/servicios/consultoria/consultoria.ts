@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-consultoria',
@@ -15,5 +14,9 @@ export class Consultoria {
 
   irChat() {
     this.router.navigate(['/chat']);
+  }
+
+  irContacto() {
+    this.router.navigate(['/contacto']);
   }
 }

@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
@@ -60,6 +61,7 @@ export class Home {
   setServiceSlide(index: number) {
     this.currentServiceSlide = index;
   }
+
   currentTestimonialSlide = 0;
 
   testimonials = [
