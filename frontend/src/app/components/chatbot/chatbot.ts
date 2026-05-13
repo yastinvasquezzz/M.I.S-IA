@@ -10,17 +10,28 @@ import { ChatService } from '../../services/chat';
   templateUrl: './chatbot.html',
   styleUrl: './chatbot.scss',
 })
-export class ChatbotComponent {
+export class Chatbot {
   isOpen = false;
   userInput = '';
   isTyping = false;
+  whatsappMenuOpen = false;
+
   messages: { text: string, type: 'user' | 'bot' }[] = [
     { text: '¡Hola! Soy el asistente de Matt Innova Solution. ¿En qué puedo ayudarte?', type: 'bot' }
   ];
+
   constructor(private chatService: ChatService) {}
 
   toggleChat() {
     this.isOpen = !this.isOpen;
+  }
+
+  toggleWhatsappMenu() {
+    this.whatsappMenuOpen = !this.whatsappMenuOpen;
+  }
+
+  closeWhatsappMenu() {
+    this.whatsappMenuOpen = false;
   }
 
   sendMessage() {
@@ -37,4 +48,4 @@ export class ChatbotComponent {
       this.messages.push({ text: resp.response, type: 'bot' });
     });
   }
-  }
+}

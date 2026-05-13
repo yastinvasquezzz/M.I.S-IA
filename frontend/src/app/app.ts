@@ -2,7 +2,7 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './components/header/header';
 import { Footer } from './components/footer/footer';
-import { ChatbotComponent } from './components/chatbot/chatbot';
+import { Chatbot } from './components/chatbot/chatbot';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,7 @@ import { ChatbotComponent } from './components/chatbot/chatbot';
     RouterOutlet,
     Header,
     Footer,
-    ChatbotComponent
+    Chatbot
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss'
