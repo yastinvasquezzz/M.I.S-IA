@@ -7,6 +7,7 @@ export class ChatbotController {
 
   @Post('ask')
   async askChatbot(@Body('message') message: string) {
-    return this.chatbotService.getChatResponse(message);
+    const response = this.chatbotService.getReply(message);
+    return { response };
   }
 }
